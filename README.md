@@ -63,6 +63,8 @@ symlinking, so the unprivileged user can never write back into mine.
 
 ---
 
-![Surxe's GitHub stats](https://github-readme-stats.vercel.app/api?username=Surxe&show_icons=true&hide_border=true)
-![Surxe's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Surxe&layout=compact&hide_border=true)
+![Discord](https://img.shields.io/badge/Discord-%40Surxe-5865F2?style=flat&logo=discord&logoColor=white)
+![Public repos](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/Surxe&query=$.public_repos&label=public%20repos&style=flat&logo=github&logoColor=white&color=2ea043)
+![PRs merged](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Dtype%3Apr%2Bauthor%3ASurxe%2Bis%3Amerged&query=$.total_count&label=PRs%20merged&style=flat&logo=git&logoColor=white&color=f05032)
+![PRs merged since 2026](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Dtype%3Apr%2Bauthor%3ASurxe%2Bis%3Amerged%2Bmerged%3A%253E%253D2026-01-01&query=$.total_count&label=PRs%20merged%20since%202026&style=flat&logo=git&logoColor=white&color=8957e5)
 
