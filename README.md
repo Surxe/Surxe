@@ -23,12 +23,14 @@ with a built-in solver, and kept going from there.
 ## War Robots: Frontiers Database
 
 A group of repos that datamine War Robots: Frontiers and publish it as a
-browsable database:
+browsable database, wired together into a patch-day pipeline:
 
+- [WRFrontiers-Exporter](https://github.com/Surxe/WRFrontiers-Exporter): decrypts and exports the raw game assets (JSON + PNG), with full headless Linux support
 - [WRFrontiersDB-Parser](https://github.com/Surxe/WRFrontiersDB-Parser): extracts and structures the raw game data
 - [WRFrontiersDB-Data](https://github.com/Surxe/WRFrontiersDB-Data): the versioned data archive the parser produces
 - [WRFrontiersDB-Site](https://github.com/Surxe/WRFrontiersDB-Site): the Astro site that presents it
-- [WRFrontiers-Discount-Visualizer](https://github.com/Surxe/WRFrontiers-Discount-Visualizer): visualizes the weekly in-game discounts
+- [WRFrontiersDB-Orchestrator](https://github.com/Surxe/WRFrontiersDB-Orchestrator): chains the whole patch-day pipeline end to end — export → parse → push to the data repo → site build — gated on manifest-date confirmation, with secrets injected at runtime rather than stored in the repo
+- [WRFrontiers-Discount-Visualizer](https://github.com/Surxe/WRFrontiers-Discount-Visualizer): visualizes the weekly in-game discounts, including a predictions page that forecasts next week's discounts from a walk-forward backtest
 - [wrf-news-research](https://github.com/Surxe/wrf-news-research): tracking how and when the WRF team edits its news feed, which feeds the discount data
 
 ## Deadlock Wiki
@@ -45,6 +47,8 @@ platform properly, one real problem at a time:
 - [my-system](https://github.com/Surxe/my-system): my whole dual-boot config, covering Claude skills, KDE shortcuts, shell aliases and functions, and a multi-user permission suite
 - [b2-backup](https://github.com/Surxe/b2-backup): Restic backups to Backblaze B2, built out of a concern for data loss, especially while migrating off Windows
 - [dev-summary](https://github.com/Surxe/dev-summary): summarizes my recent git activity across every local repo in a single Claude call
+- [claude-tts](https://github.com/Surxe/claude-tts): speaks Claude Code's terminal output aloud on Linux — a token-free dev→user audio bridge over Piper TTS and systemd path units
+- [clip-db](https://github.com/Surxe/clip-db): tags, categorizes, and queries gaming clips via controlled-vocabulary LLM tagging — a batch tagger, a query MCP server (exact + semantic search + retrieval-augmented Q&A), a Discord distributor, and an eval suite for the classifier
 - [todo](https://github.com/Surxe/todo): a central capture system for dev ideas, driven from a shortcut, the shell, or a Claude Code session
 - [steam-price-tracker](https://github.com/Surxe/steam-price-tracker): per-app Steam price tracking with a customizable discount threshold that emails me when a game drops below it, since Steam's wishlist only notifies on any discount at all
 - [razer-battery-status](https://github.com/Surxe/razer-battery-status): a sudo-free battery readout for a Razer wireless mouse on Linux, since Razer's own software isn't supported here
