@@ -44,7 +44,9 @@ uploading Deadlock's game data to the wiki.
 After moving to a Debian setup, I built a set of personal projects to learn the
 platform properly, one real problem at a time:
 
-- [my-system](https://github.com/Surxe/my-system): my whole dual-boot config, covering Claude skills, KDE shortcuts, shell aliases and functions, and a multi-user permission suite
+- [my-system](https://github.com/Surxe/my-system): config-as-code and documented setup for my dual-boot Windows/Debian workstation — KDE shortcuts, the multi-user permission suite, and per-domain system docs
+- [home-server](https://github.com/Surxe/home-server): config-as-code and one-command restore for a headless Proxmox box (an old laptop) that runs my always-on services off my main PC — host networking/wifi, backups, a generic VM creator, and a cross-box todo hub (it hosts things like my [valheim-server](https://github.com/Surxe/valheim-server))
+- [dev-env](https://github.com/Surxe/dev-env): the shared dev-environment layer both machines pull in as a sibling clone — the portable Claude/DeepSeek skills, shell fragments, statusline, and memory that should be identical everywhere, kept in one repo so it can't drift between boxes
 - [b2-backup](https://github.com/Surxe/b2-backup): Restic backups to Backblaze B2, built out of a concern for data loss, especially while migrating off Windows
 - [dev-summary](https://github.com/Surxe/dev-summary): summarizes my recent git activity across every local repo in a single Claude call
 - [claude-tts](https://github.com/Surxe/claude-tts): speaks Claude Code's terminal output aloud on Linux — a token-free dev→user audio bridge over Piper TTS and systemd path units
@@ -62,9 +64,10 @@ with, so I put a real boundary in place before running any of it.
 
 Claude Code runs under a separate, unprivileged PC user with its own GitHub
 account, [Surxe-dev](https://github.com/Surxe-dev), so automation never touches my
-primary account's credentials or my home directory. Deployment is handled by the
-`install.sh` in [my-system](https://github.com/Surxe/my-system), which *copies*
-config into each user's home across that privilege boundary rather than
+primary account's credentials or my home directory. On the workstation, deployment
+is handled by the `install.sh` in [my-system](https://github.com/Surxe/my-system),
+which pulls in the shared [dev-env](https://github.com/Surxe/dev-env) layer and
+*copies* config into each user's home across that privilege boundary rather than
 symlinking, so the unprivileged user can never write back into mine.
 
 ## Reach me
